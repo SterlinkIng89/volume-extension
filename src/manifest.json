@@ -1,0 +1,41 @@
+{
+  "name": "Volume Extension",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "main.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "utils/dom.js",
+        "utils/volume.js",
+        "strategies/twitter.js",
+        "strategies/youtube.js",
+        "strategies/others.js",
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}

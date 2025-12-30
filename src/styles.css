@@ -1,0 +1,43 @@
+.volume-control-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 5px;
+    height: 100%;
+    z-index: 9999;
+}
+
+/* Generic Overlay Style */
+.volume-control-generic {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+    height: auto;
+}
+
+.volume-control-input {
+    width: 45px;
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    padding: 4px;
+    font-size: 14px;
+    font-family: sans-serif;
+    text-align: center;
+    cursor: text;
+}
+
+.volume-control-input:focus {
+    outline: none;
+    border-color: #1d9bf0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.volume-control-label {
+    display: none;
+}
